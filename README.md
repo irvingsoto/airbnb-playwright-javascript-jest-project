@@ -4,8 +4,8 @@
 
 #  Pre-requisites
 
-[NodeJs](https://nodejs.org/en/)
-[NPM]
+- [NodeJs](https://nodejs.org/en/)
+- [NPM]
 
 #  Running tests
 
@@ -17,7 +17,6 @@
 
 - https://playwright.dev/ 
 - https://jestjs.io/
-- https://applitools.com/blog/top-playwright-questions-answered/#:~:text=Playwright%20is%20a%20relatively%20new,testing%20for%20today's%20web%20apps
 - https://www.selenium.dev/documentation/en/guidelines_and_recommendations/page_object_models/
 - https://github.com/microsoft/playwright#-playwright
 </pre></body>
