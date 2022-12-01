@@ -5,7 +5,7 @@
 #  Pre-requisites
 
 - [NodeJs](https://nodejs.org/en/)
-- [NPM]
+- NPM
 
 #  Running tests
 
