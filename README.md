@@ -5,8 +5,8 @@
 - [NodeJs](https://nodejs.org/en/)
 - [NPM]
 
-:pushpin: Clone this repository to your local or download it as zip 
-:pushpin: Run ```npm install``` prior to executing any test. 
+- Clone this repository to your local or download it as zip 
+- Run ```npm install``` prior to executing any test. 
 
 :pushpin: To execute tests run npm test (all tests in /tests directory will run)
 
