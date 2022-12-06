@@ -1,32 +1,43 @@
-const { chromium } = require('playwright');
-const HomePage = require('../pages/Home.page');
+// https://jestjs.io/docs/expect
+const { chromium } = require("playwright");
+const HomePage = require("../pages/Home.page");
+const PlacePage = require("../pages/Place.page");
+require("dotenv").config("./.env");
 
-describe('Airbnb Test_01', () => {
-    // jest timeout is by default 5000ms to run tests, with this we override this value
-      jest.setTimeout(30000);
-      let browser = null;
-      let context = null;
-      let page = null;
-      let homePage  = null;
+describe("Enzyme Interview_tae", () => {
+  jest.setTimeout(100000);
+  let browser = null;
+  let context = null;
+  let page = null;
+  let homePage = null;
+  let placeDetailsPage = null;
 
-    // runs before all tests
-    beforeAll( async ()=>{
-      //launch browser and navigate to the Airbnb home page
-      browser = await chromium.launch({ headless: false });
-        context = await browser.newContext();
-        page = await context.newPage();
-        homePage = new HomePage(page);
-        await homePage.navigate();
+  beforeAll(async () => {
+    //launch browser and navigate to the home page
+    browser = await chromium.launch({ headless: false, slowMo:500 });
+    context = await browser.newContext();
+    page = await context.newPage();
+    homePage = new HomePage(page);
+    await homePage.navigate();
+    placeDetailsPage = new PlacePage(page);
   });
 
-    // runs after all tests
-    afterAll(async() =>{
-       await browser.close();
-    });
-    
-    test('Home Page loads succesfully', async() =>{
-        // assertions
-        expect(page).not.toBeNull();
-        expect(await page.title()).not.toBeNull();
-    });
+  test("User searches, check place pictures and verify cancellation policy", async () => {
+    console.log("Step #1 Navigate to https://www.airbnb.mx/");
+    await homePage.verifyPageIsLoading();
+    console.log("Step #2 Search for a place with filer criteria");
+    await homePage.searchPlace(process.env.PLACE_TO_SEARCH);
+    console.log("Step #3 Click on one of the places");
+    await placeDetailsPage.ClickOnPlace();
+    console.log("Step #4 Verify user can look at the pictures");
+    await placeDetailsPage.lookAtThePictures();
+    console.log("Step #5 Verify place has a cancellation policy");
+    await placeDetailsPage.verifyCancellationPolicy();
+  });
+
+  afterAll(async () => {
+    // closing browser
+    await context.close();
+    await browser.close();
+  });
 });
