@@ -1,6 +1,6 @@
 <body data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed=""><pre style="word-wrap: break-word; white-space: pre-wrap;">
 
-# 🎭 Playwright JS/Jest/Applitools with POM Test Automation Framework
+# 🎭 Playwright JS/Jest/Applitools Test Automation Framework
 
 #  Pre-requisites
 
