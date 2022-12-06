@@ -19,4 +19,5 @@
 - https://jestjs.io/
 - https://www.selenium.dev/documentation/en/guidelines_and_recommendations/page_object_models/
 - https://github.com/microsoft/playwright#-playwright
+- https://applitools.com/blog/top-playwright-questions-answered/#:~:text=Playwright%20is%20a%20relatively%20new,testing%20for%20today's%20web%20apps
 </pre></body>
