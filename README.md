@@ -1,6 +1,6 @@
 <body data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed=""><pre style="word-wrap: break-word; white-space: pre-wrap;">
 
-# 🎭 Playwright JS/Jest with POM Test Automation Framework
+# 🎭 Playwright JS/Jest/Applitools Test Automation Framework
 
 #  Pre-requisites
 
@@ -19,4 +19,5 @@
 - https://jestjs.io/
 - https://www.selenium.dev/documentation/en/guidelines_and_recommendations/page_object_models/
 - https://github.com/microsoft/playwright#-playwright
+- https://applitools.com/blog/top-playwright-questions-answered/#:~:text=Playwright%20is%20a%20relatively%20new,testing%20for%20today's%20web%20apps
 </pre></body>
